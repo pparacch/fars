@@ -168,7 +168,7 @@ fars_summarize_years <- function(years) {
 #' @section Depends on:
 #' \enumerate{
 #'   \item \code{\link[dplyr]{filter}} in the \code{dplyr} package.
-#'   \item \code{\link[maps]{map}} in the \code{map} package.
+#'   \item \code{\link[maps]{map}} in the \code{maps} package.
 #'   \item \code{\link[graphics]{points}} in the \code{graphics} package.
 #' }
 #'
