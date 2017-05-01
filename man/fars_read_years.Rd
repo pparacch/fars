@@ -27,8 +27,9 @@ For each provided year the following steps are executed:
   \item Keep \code{MONTH} and \code{year} variables only from the data frame table.
 }
 
-The data file names must be compliant with FARS pattern name. If a file does not exist
-the associated data is set to \code{NULL}.
+The data file names must be compliant with FARS pattern name. The data files must be located
+in the working directory. If a file does not exist in the working directory the associated data
+is set to \code{NULL}.
 }
 \section{Depends on}{
 
@@ -42,5 +43,4 @@ the associated data is set to \code{NULL}.
 fars_read_years(c(2013, 2014, 2015))
 fars_read_years(c("2013", "2014", "2015"))
 }
-
 }

@@ -66,8 +66,9 @@ make_filename <- function(year) {
 #'   \item Keep \code{MONTH} and \code{year} variables only from the data frame table.
 #' }
 #'
-#'The data file names must be compliant with FARS pattern name. If a file does not exist
-#'the associated data is set to \code{NULL}.
+#'The data file names must be compliant with FARS pattern name. The data files must be located
+#'in the working directory. If a file does not exist in the working directory the associated data
+#'is set to \code{NULL}.
 #'
 #' @param years A vector containing the years of interests as \code{integer} or
 #' \code{character}.
@@ -80,12 +81,13 @@ make_filename <- function(year) {
 #'   \item \code{\link[dplyr]{mutate}} and \code{\link[dplyr]{select}} in the \code{dplyr} package.
 #' }
 #'
+#' @importFrom magrittr "%>%"
+#'
 #' @examples
 #' \dontrun{
 #' fars_read_years(c(2013, 2014, 2015))
 #' fars_read_years(c("2013", "2014", "2015"))
 #' }
-#'
 #' @export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -125,12 +127,13 @@ fars_read_years <- function(years) {
 #'   \item \code{\link[tidyr]{spread}} in the \code{tidyr} package.
 #' }
 #'
+#' @importFrom magrittr "%>%"
+#'
 #' @examples
 #' \dontrun{
 #' fars_summarize_years(c(2013, 2014))
 #' fars_summarize_years(c("2013", "2014"))
 #' }
-#'
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -174,7 +177,6 @@ fars_summarize_years <- function(years) {
 #' fars_map_state(4, 2013)
 #' fars_map_state("4", "2013")
 #' }
-#'
 #' @export
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

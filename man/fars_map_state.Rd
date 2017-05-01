@@ -44,5 +44,4 @@ execution is stopped and a message is returned.
 fars_map_state(4, 2013)
 fars_map_state("4", "2013")
 }
-
 }
