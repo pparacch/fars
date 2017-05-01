@@ -179,6 +179,7 @@ fars_summarize_years <- function(years) {
 #' }
 #' @export
 fars_map_state <- function(state.num, year) {
+  require(maps) #issue with maps and get(dbname) 'stateMapEnv'
   filename <- make_filename(year)
   data <- fars_read(filename)
   state.num <- as.integer(state.num)

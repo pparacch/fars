@@ -4,14 +4,14 @@ Version: 0.0.0.9000
 Authors@R: person("Pier Lorenzo", "Paracchini", email = "pparacch@hotmail.com", role = c("aut", "cre"))
 Description: Load the FARS data files and provide simple summary/ visualization functions.  
 Depends: 
-  R (>= 3.3.3),
-  maps (>= 3.1.1)
+  R (>= 3.3.3)
 Imports:
   readr (>= 1.1.0),
   dplyr (>= 0.5.0),
   tidyr (>= 0.6.1),
   magrittr (>= 1.5),
-  graphics (>= 3.3.3)
+  graphics (>= 3.3.3),
+  maps (>= 3.1.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
