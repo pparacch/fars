@@ -9,7 +9,7 @@
 #' content of the file is read. Please note that \strong{while reading the file all
 #' warnings are suppressed}.
 #'
-#' @param file The name of the file which the data are to be read from.
+#' @param filename The name of the file which the data are to be read from.
 #'
 #' @return  A data frame table (see \code{\link[dplyr]{tbl_df}} in the \code{dplyr} package).
 #'
@@ -161,7 +161,7 @@ fars_summarize_years <- function(years) {
 #' If the provided \code{state} is valid and does not have any incidents then
 #' execution is stopped and a message is returned.
 #'
-#' @param years A vector containing the years of interests as \code{integer} or
+#' @param year A vector containing the years of interests as \code{integer} or
 #' \code{character}.
 #' @param state.num The State identifier as an \code{integer} or a \code{character} .
 #'

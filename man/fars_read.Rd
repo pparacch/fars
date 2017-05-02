@@ -7,7 +7,7 @@
 fars_read(filename)
 }
 \arguments{
-\item{file}{The name of the file which the data are to be read from.}
+\item{filename}{The name of the file which the data are to be read from.}
 }
 \value{
 A data frame table (see \code{\link[dplyr]{tbl_df}} in the \code{dplyr} package).

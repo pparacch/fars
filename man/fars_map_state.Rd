@@ -9,7 +9,7 @@ fars_map_state(state.num, year)
 \arguments{
 \item{state.num}{The State identifier as an \code{integer} or a \code{character} .}
 
-\item{years}{A vector containing the years of interests as \code{integer} or
+\item{year}{A vector containing the years of interests as \code{integer} or
 \code{character}.}
 }
 \description{
