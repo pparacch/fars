@@ -12,6 +12,7 @@ test_that("fars_read returns an expected data when passing existing filename",{
   expected_dim <- c(999L, 50L)
   actual_data <- fars_read(existing_filename)
   expect_false(is.null(actual_data))
+  expect_is(actual_data, "tbl_df")
   expect_identical(dim(actual_data), expected_dim)
 })
 
