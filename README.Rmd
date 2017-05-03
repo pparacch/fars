@@ -55,9 +55,9 @@ devtools::install_github("pparacch/fars")
 library(farsr)
 ```
 
-Use the following table to have an overview of the provided functions and their usage:
+Use the following table to have an overview of the provided functions:
 
-| Function  | Responsibility |
+| Function  |  |
 | :--------- | :-------------- |
 | `fars_read()`  | Read a FARS datafile |
 | `fars_read_years()` | Read FARS datafile(s) for provided year(s) |

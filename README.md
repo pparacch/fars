@@ -49,7 +49,7 @@ Getting Started
 library(farsr)
 ```
 
-Use the following table to have an overview of the provided functions and their usage:
+Use the following table to have an overview of the provided functions:
 
 <table style="width:38%;">
 <colgroup>
@@ -59,7 +59,7 @@ Use the following table to have an overview of the provided functions and their 
 <thead>
 <tr class="header">
 <th align="left">Function</th>
-<th align="left">Responsibility</th>
+<th align="left"></th>
 </tr>
 </thead>
 <tbody>

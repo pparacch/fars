@@ -19,4 +19,5 @@ Create a file name, using the provided \code{year}, following the FARS pattern
 \examples{
 make_filename(1976)
 make_filename("2017")
+
 }
