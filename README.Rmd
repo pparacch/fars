@@ -25,6 +25,7 @@ The development of the package is done introducing the following software engine
 ## What needs to be done
 
 * add the FARS R code provided during the course
+  * refactor R code in order to remove the __Non-Standard Evaluation Issue__ [dplyr NSE vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/nse.html), [NSE explained](http://adv-r.had.co.nz/Computing-on-the-language.html).
 * document the code, creating related help functions with `roxygen2`
 * document the package, using a README file and a vignette to include in your package with `knitr` and __R Markdown__
 * add some unit tests / integration tests using `testthat`

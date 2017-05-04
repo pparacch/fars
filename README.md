@@ -15,6 +15,7 @@ What needs to be done
 ---------------------
 
 -   add the FARS R code provided during the course
+-   refactor R code in order to remove the **Non-Standard Evaluation Issue** [dplyr NSE vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/nse.html), [NSE explained](http://adv-r.had.co.nz/Computing-on-the-language.html).
 -   document the code, creating related help functions with `roxygen2`
 -   document the package, using a README file and a vignette to include in your package with `knitr` and **R Markdown**
 -   add some unit tests / integration tests using `testthat`
