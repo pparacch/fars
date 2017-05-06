@@ -20,7 +20,7 @@ What needs to be done
 -   document the package, using a README file and a vignette to include in your package with `knitr` and **R Markdown**
 -   add some unit tests / integration tests using `testthat`
 -   add the package on GitHub
--   set up the repository so that the package can be checked and built on Travis with no errors, warnings or notes.
+-   set up the repository so that the package can be checked and built on Travis with no errors, warnings or notes. See [Travis Build History](https://travis-ci.org/pparacch/fars/builds)
 
 **IMPORTANT!!** The "maps" package has been added in the *Depends* section in the **DESCRIPTION** file because it sets some environment variables when its loaded & attached, which doesn't happen if <maps::map>() is used throwing a "stateMapEnv not found" error.
 
