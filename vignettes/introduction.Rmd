@@ -1,0 +1,98 @@
+---
+title: "Introduction"
+author: "Pier Lorenzo Paracchini"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  collapse = TRUE
+)
+```
+
+## Overview
+
+The goal of `fars` package is to help you performing basic operation on [Fatality Analysis Reporting System](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) (FARS) data, a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. Specifically it allows you to perform the following operations:
+
+* load the FARS datafile by filename or by years,
+* summarize the number of fatal injuries suffered in motor vehicle traffic crashes by month and year,
+* visualize the fatal injuries suffered in motor vehicle traffic crashes in a specific state (USA) for a specific year.
+
+The following functions are made available through the package:
+
+| Function  |  |
+| :--------- | :-------------- |
+| `fars_read()`  | Read a FARS datafile |
+| `fars_read_years()` | Read FARS datafile(s) for provided year(s) |
+| `fars_summarize_years()` | Summarizes injuries by month for provided year(s) |
+|`fars_map_state()` | Visualize map with injuries for provided state (USA) and year |
+
+## How to install the package
+
+The installation of the _fars_ package is done using its [github repository](https://github.com/pparacch/fars) and the `install_github()` function in the _devtools_ package. 
+
+```{r}
+#Using devtools and Github
+#Setting up the flag to build the vignette of the package
+devtools::install_github("pparacch/fars", build_vignettes = TRUE)
+```
+
+## Getting Started
+
+### Load and attach the package
+
+```{r}
+library(farsr)
+```
+
+### How to read a FARS datafile into memory
+
+Using `fars_read` is possible for the user to load a specific file into memory. The file must be a FARS datafile. The unique location of the FARS datafile must be provided as argument using a __relative__ or an __absolute__ path.
+
+```{r}
+fars_datafile_path <- "/tmp/data/fars-datafile.csv.bz2" 
+fars_data <- fars_read(fars_datafile_path)
+```
+
+### How to create a filename compliant with FARS format
+
+Using `make_filename` is possible for the user to generate a filename compliant with the FARS format. The year associated to the FARS data must be provided as argument (e.g. `integer` or `character`).  
+
+```{r}
+year_fars_data <- 2017 #or "2017"
+filename_fars_data <- make_filename(year = year_fars_data)
+```
+
+### How to get FARS data for selected years limited to `MONTH`
+
+Using `fars_read_years` is possible for the user to load in memory the FARS data limited to the `MONTH` feature for the provided years. The years of interest must be provided as argument using a vector of `integer` or `character`. If there is no FARS data for a selected year then `NULL` is returned for that year.
+
+```{r}
+years_fars_data <- c(2013, 2014) # or c("2013", "2014")
+fars_data_by_year <- fars_read_years(years = years_fars_data)
+```
+
+### How to summarize the number of fatal accidents by year
+
+Using `fars_summarize_years` is possible for the user to load in memory the summary of the fatal accidents extrapolated from the FARS data for the provided years. The years of interest must be provided as argument using a vector of `integer` or `character`.
+
+```{r eval=FALSE}
+years_fars_data <- c(2013, 2014) # or c("2013", "2014")
+summary_fars_accidents_by_year <- fars_summarize_years(years = years_fars_data)
+```
+
+### Visualize the map of fatal accidents for a specific year and state (USA) 
+
+Using `fars_map_state` is possible for the user to visualize the map of fatal accidents for a specific year and state.
+
+```{r eval=FALSE}
+year_fars_data <- 2013 # or "2013"
+state.num <- 1
+fars_map_state(state.num = state.num, year = year_fars_data)
+```
