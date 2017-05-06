@@ -1,6 +1,6 @@
 Package: farsr
 Title: Simple analysis of Fatality Analysis Reporting System (FARS) data
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: person("Pier Lorenzo", "Paracchini", email = "pparacch@hotmail.com", role = c("aut", "cre"))
 Description: Load the FARS data files and provide simple summary/ visualization functions.  
 Depends:
