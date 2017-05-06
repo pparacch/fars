@@ -22,6 +22,8 @@ What needs to be done
 -   add the package on GitHub
 -   set up the repository so that the package can be checked and built on Travis with no errors, warnings or notes.
 
+**IMPORTANT!!** The "maps" package has been added in the *Depends* section in the **DESCRIPTION** file because it sets some environment variables when its loaded & attached, which doesn't happen if <maps::map>() is used throwing a "stateMapEnv not found" error.
+
 `farsr` package ![Travis Badge](https://travis-ci.org/pparacch/fars.svg?branch=master)
 ======================================================================================
 
